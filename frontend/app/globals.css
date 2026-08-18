@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
 
 :root {
   --font-display: 'Space Grotesk', sans-serif;
@@ -10,41 +10,33 @@
   --font-body: 'Inter', sans-serif;
 }
 
+html {
+  scroll-snap-type: y proximity;
+  scroll-padding-top: 56px;
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #0d1512;
-  color: #ece7d8;
+  background-color: #0A0F1C;
+  color: #F8FAFC;
   position: relative;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: linear-gradient(#28382f 1px, transparent 1px),
-    linear-gradient(90deg, #28382f 1px, transparent 1px);
-  background-size: 64px 64px;
-  opacity: 0.15;
-  pointer-events: none;
-  z-index: 0;
+::selection {
+  background: #3B82F6;
+  color: #0A0F1C;
 }
 
-::selection {
-  background: #e8a33d;
-  color: #0d1512;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+  }
 }
 
 @keyframes reveal {
   to {
     opacity: 1;
-  }
-}
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.35;
   }
 }
 

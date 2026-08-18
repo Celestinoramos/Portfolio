@@ -1,47 +1,34 @@
-import SectionHeading from './SectionHeading';
+import Reveal from './Reveal';
+
+const FOCUS = ['Software Engineering', 'Cybersecurity', 'Networking', 'Cloud'];
 
 export default function About() {
   return (
-    <section id="sobre" className="border-t border-line py-16">
-      <div className="mx-auto max-w-[960px] px-7">
-        <SectionHeading label="sobre" title="Da rede ao runtime" />
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.3fr_1fr]">
-          <div className="space-y-4 text-[15.5px] text-dim">
-            <p>
-              Concluí o <strong className="font-semibold text-text">5º ano de Engenharia Informática</strong> no
-              Instituto Superior Politécnico de Benguela e, em paralelo, o{' '}
-              <strong className="font-semibold text-text">Common Core da 42 Luanda</strong> — uma formação sem
-              aulas tradicionais, baseada em peer-learning e resolução de problemas reais, cobrindo desde
-              programação de sistemas em C/C++ até administração de redes e desenvolvimento web.
-            </p>
-            <p>
-              Antes de programar a tempo inteiro, estive na linha da frente da infraestrutura: instalação e
-              configuração de sistemas de <strong className="font-semibold text-text">CCTV</strong> e suporte
-              técnico direto a redes e utilizadores. Essa base prática é o que trago para cada projeto — sei
-              como um sistema se comporta quando a rede falha, não só quando o código corre.
-            </p>
-            <p>
-              Hoje junto estas duas metades: sou autor de plataformas full-stack em produção (Mado, Agriconecta,
-              Kwanza ERP) e de projetos de sistemas em C/C++ na 42 (Born2beroot, ft_irc, Inception), sempre com
-              rigor e uma mentalidade autodidata habituada a ambientes exigentes.
-            </p>
-          </div>
-          <div className="rounded-md border border-line bg-surface p-5 font-mono">
-            <Stat k="Formação" v="Eng. Informática · 42 Luanda" />
-            <Stat k="Diferencial" v="Full-stack + Redes + Segurança" />
-            <Stat k="Localização" v="Luanda, Angola" last />
-          </div>
+    <section id="about" className="flex min-h-screen snap-start snap-always items-center border-t border-line">
+      <div className="mx-auto w-full max-w-[880px] px-7">
+        <Reveal>
+          <h2 className="mb-8 font-mono text-[15px] font-bold uppercase tracking-[0.2em] text-blue">
+            <span className="text-cyan">$</span> about_me
+          </h2>
+        </Reveal>
+        <Reveal delay={100}>
+          <p className="mb-8 max-w-[640px] font-mono text-[13.5px] leading-relaxed text-dim">
+            Engenheiro Informático e Transcender da 42 Luanda — escola de programação intensiva baseada em
+            projetos práticos e trabalho em equipa. Desenvolvedor full-stack com foco em backend, redes e
+            segurança, com experiência em administração de sistemas Linux, virtualização, containerização e cloud.
+          </p>
+        </Reveal>
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-4">
+          {FOCUS.map((item, i) => (
+            <Reveal key={item} delay={200 + i * 80}>
+              <div className="border border-line bg-surface px-4 py-3.5 font-mono text-[13px] text-dim">
+                <span className="mr-2 text-cyan">▸</span>
+                {item}
+              </div>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>
-  );
-}
-
-function Stat({ k, v, last }: { k: string; v: string; last?: boolean }) {
-  return (
-    <div className={last ? '' : 'mb-3.5'}>
-      <div className="text-[11px] uppercase tracking-[0.08em] text-faint">{k}</div>
-      <div className="text-[18px] font-semibold leading-tight text-amber">{v}</div>
-    </div>
   );
 }

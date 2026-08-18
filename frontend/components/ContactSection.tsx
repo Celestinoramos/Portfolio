@@ -1,40 +1,36 @@
+import Reveal from './Reveal';
 import ContactForm from './ContactForm';
 
 export default function ContactSection() {
   return (
-    <section id="contacto" className="border-t border-line py-16">
-      <div className="mx-auto max-w-[960px] px-7">
-        <div className="rounded-lg border border-line bg-surface p-11 text-center">
-          <h2 className="mb-3.5 font-display text-[clamp(26px,4vw,36px)] font-semibold">
-            Vamos falar de backend?
+    <section id="contact" className="flex min-h-screen snap-start snap-always items-center border-t border-line">
+      <div className="mx-auto w-full max-w-[880px] px-7">
+        <Reveal>
+          <h2 className="mb-8 font-mono text-[15px] font-bold uppercase tracking-[0.2em] text-blue">
+            <span className="text-cyan">$</span> contact
           </h2>
-          <p className="mx-auto mb-5 max-w-[460px] text-dim">
-            Aberto a oportunidades como Desenvolvedor Full-Stack / Backend — remoto, híbrido ou em Angola. Se
-            procuras alguém que entenda o sistema de ponta a ponta — código, rede e segurança — contacta-me.
+        </Reveal>
+        <Reveal delay={100}>
+          <p className="mb-6 max-w-[520px] font-mono text-[13.5px] leading-relaxed text-dim">
+            Aberto a oportunidades como Desenvolvedor Full-Stack / Backend — remoto, híbrido ou em Angola.
           </p>
-          <div className="mb-2 font-mono text-[13px] text-dim">
-            <a href="mailto:ramoscumbica2@outlook.com" className="text-amber">
-              ramoscumbica2@outlook.com
-            </a>{' '}
-            · +244 937-321-982
+        </Reveal>
+        <Reveal delay={200}>
+          <div className="mb-10 space-y-2 font-mono text-[13px] text-dim">
+            <p>
+              <span className="text-cyan">✉</span>{' '}
+              <a href="mailto:ramoscumbica2@outlook.com" className="text-blue transition-colors hover:text-cyan">
+                ramoscumbica2@outlook.com
+              </a>
+            </p>
+            <p>
+              <span className="text-cyan">☎</span> +244 937-321-982
+            </p>
           </div>
-          <div className="mt-6 flex flex-wrap justify-center gap-4">
-            <a
-              href="https://github.com/Celestinoramos"
-              target="_blank"
-              className="rounded-[3px] border border-line px-5 py-2.5 font-mono text-[13px] transition-colors hover:border-amber hover:text-amber"
-            >
-              GitHub ↗
-            </a>
-            <a
-              href="#"
-              className="rounded-[3px] border border-line px-5 py-2.5 font-mono text-[13px] transition-colors hover:border-amber hover:text-amber"
-            >
-              LinkedIn ↗
-            </a>
-          </div>
+        </Reveal>
+        <Reveal delay={300}>
           <ContactForm />
-        </div>
+        </Reveal>
       </div>
     </section>
   );
