@@ -1,0 +1,33 @@
+# See https://github.com/github/gitignore/blob/main/Node.gitignore
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# NestJS
+dist/
+*.log
+
+# Environment variables
+.env*
+!.env.example
+!.env.local
+
+# TypeScript
+*.tsbuildinfo
+*.tbz
+
+# MacOS
+.DS_Store
+
+# Vim
+*.swp
+*.lock
+
+# Database
+*.sqlite
+*.db
+
+# Docker
+.dockerignore
