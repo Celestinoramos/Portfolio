@@ -1,6 +1,6 @@
 import Reveal from './Reveal';
 
-const FOCUS = ['Software Engineering', 'Cybersecurity', 'Networking', 'Cloud'];
+const FOCUS = ['Desenvolvedor Full-Stack', 'Administração de Sistemas Linux', 'Cybersecurity', 'Networking'];
 
 export default function About() {
   return (
