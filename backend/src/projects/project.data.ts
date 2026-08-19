@@ -114,7 +114,7 @@ export const PROJECTS: Project[] = [
     description:
       'Resolução de 10 níveis progressivos de configuração e diagnóstico de redes: TCP/IP, subnetting e routing.',
     tags: ['TCP/IP', 'Subnetting', 'Routing'],
-    featured: true,
+    featured: false,
   },
   {
     slug: 'philosophers',
@@ -145,11 +145,11 @@ export const PROJECTS: Project[] = [
     featured: false,
   },
   {
-    slug: 'fdf',
-    title: 'FdF',
+    slug: 'fractol',
+    title: 'Fractol',
     status: 'school',
     statusLabel: '42 Luanda',
-    description: 'Visualização de mapas 3D com MinilibX.',
+    description: 'Exploração de fractais (Mandelbrot e Julia) com MinilibX.',
     tags: ['C', 'MinilibX'],
     featured: false,
   },

@@ -29,11 +29,11 @@ export default function Projects({ projects, live }: { projects: Project[]; live
           {featured.map((p, i) => (
             <Reveal key={p.slug} delay={Math.min(i * 70, 420)}>
               <div className="group flex h-full flex-col border border-line bg-surface p-5 transition-colors hover:border-blue">
-                <div className="mb-2 font-mono text-[14px] font-semibold text-text group-hover:text-blue">
+                <div className="mb-2 font-mono text-[16px] font-semibold text-text group-hover:text-blue">
                   {p.title}
                 </div>
-                <p className="mb-4 flex-1 font-mono text-[12px] leading-relaxed text-dim">{p.description}</p>
-                <div className="flex flex-wrap gap-1.5 font-mono text-[10.5px]">
+                <p className="mb-4 flex-1 font-mono text-[14px] leading-relaxed text-dim">{p.description}</p>
+                <div className="flex flex-wrap gap-1.5 font-mono text-[12px]">
                   {p.tags.map((t) => (
                     <span key={t} className="border border-line px-2 py-0.5 text-faint">
                       {t}
@@ -41,7 +41,7 @@ export default function Projects({ projects, live }: { projects: Project[]; live
                   ))}
                 </div>
                 {(p.repoUrl || p.demoUrl) && (
-                  <div className="mt-3 flex gap-4 font-mono text-[11.5px]">
+                  <div className="mt-3 flex gap-4 font-mono text-[13px]">
                     {p.repoUrl && (
                       <a href={p.repoUrl} target="_blank" className="text-blue transition-colors hover:text-cyan">
                         repo ↗
